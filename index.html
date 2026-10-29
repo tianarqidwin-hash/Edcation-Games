@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perawatan Kulit Berjerawat — Media Pembelajaran</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <div class="header-inner">
+        <span class="brand-icon">✿</span>
+        <span class="brand">Ruang Belajar Kecantikan</span>
+
+        <nav>
+          <button type="button" data-go="home">Menu</button>
+          <button type="button" data-go="goals">Materi</button>
+<button
+  class="nav-btn"
+  type="button"
+  onclick="window.location.href='https://tianarqidwin-hash.github.io/ale-s-glow-salon/'"
+>
+  Game
+</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-6xl px-5 py-8">
+      <section id="home" class="screen">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="eyebrow">Oleh Faradilla Isnainiyah Rahmi</p>
+
+            <h1 class="heading">
+              PERAWATAN KULIT WAJAH MENGGUNAKAN ALAT LISTRIK UNTUK KULIT BERJERAWAT
+            </h1>
+
+            <p class="muted">
+              Media Pembelajaran Interaktif Siswa SMK Jurusan Tata Kecantikan Kulit dan Rambut
+            </p>
+
+            <form id="student-form" class="card p-5 mt-6">
+              <h2 class="heading">Data Diri Siswa</h2>
+
+              <label for="student-name">Nama Lengkap</label>
+              <input id="student-name" type="text" required placeholder="Masukkan nama lengkap">
+
+              <label for="student-class">Kelas</label>
+              <input id="student-class" type="text" required placeholder="Contoh: XI Tata Kecantikan 1">
+
+              <label for="student-attendance">Nomor Absen</label>
+              <input id="student-attendance" type="number" min="1" step="1" required placeholder="Masukkan nomor absen">
+
+              <p id="form-error" hidden>
+                Lengkapi semua kolom dengan benar sebelum melanjutkan.
+              </p>
+
+              <div id="student-summary" hidden></div>
+
+              <div class="nav-row">
+                <button type="submit" class="btn primary">Simpan & Mulai Belajar</button>
+                <button type="reset" class="btn secondary">Bersihkan Formulir</button>
+              </div>
+            </form>
+
+            <p id="personal-greeting" hidden></p>
+          </div>
+
+          <div class="illustration">
+            <div class="portrait-wrap">
+              <div class="art-badge">🌷</div>
+              <p class="portrait-caption">
+                Kenali kulitnya. Pilih tindakan yang aman!
+                <br>Selamat Belajar dan Semoga Sukses!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="goals" class="screen" hidden>
+        <p class="eyebrow">01 / ARAH BELAJAR</p>
+        <h2 class="heading page-heading">Tujuan Pembelajaran</h2>
+
+        <div class="grid md:grid-cols-2 gap-3">
+          <article class="card p-5">01 · Menjelaskan karakteristik kulit wajah berjerawat.</article>
+          <article class="card p-5">02 · Membedakan komedo, papula, pustula, dan lesi dalam.</article>
+          <article class="card p-5">03 · Menjelaskan fungsi dan batasan alat listrik kecantikan.</article>
+          <article class="card p-5">04 · Memilih tindakan berdasarkan hasil analisis kulit.</article>
+          <article class="card p-5">05 · Menjelaskan prosedur higienis dan aman.</article>
+          <article class="card p-5">06 · Mengenali kontraindikasi dan kapan perlu merujuk.</article>
+        </div>
+
+        <div class="nav-row">
+          <button type="button" data-go="skin" class="btn primary">Lanjut: Kenali Kulit →</button>
+          <button type="button" data-go="home" class="btn secondary">Kembali ke Menu</button>
+        </div>
+      </section>
+
+      <section id="skin" class="screen" hidden>
+        <p class="eyebrow">02 / DASAR ANALISIS</p>
+        <h2 class="heading page-heading">Pengenalan Kulit Berjerawat</h2>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <article class="card p-6">
+            <h3>Apa itu kulit berjerawat?</h3>
+            <p class="muted">
+              Jerawat muncul ketika folikel rambut tersumbat oleh sebum dan sel kulit mati.
+              Peradangan dapat menghasilkan benjolan merah atau bernanah.
+            </p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Apa yang perlu diamati?</h3>
+            <p class="muted">
+              Perhatikan minyak berlebih, jenis dan sebaran lesi, kemerahan, luka,
+              serta sensitivitas. Tanyakan keluhan dan riwayat perawatan sebelum memilih tindakan.
+            </p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Batas peran beautician</h3>
+            <p class="muted">
+              Analisis di salon membantu menentukan keamanan tindakan kosmetik,
+              bukan menegakkan diagnosis medis. Jerawat berat, nyeri, atau menetap
+              perlu dinilai tenaga kesehatan.
+            </p>
+          </article>
+        </div>
+
+        <div class="nav-row">
+          <button type="button" data-go="lesions" class="btn primary">Lanjut: Jenis Lesi →</button>
+          <button type="button" data-go="goals" class="btn secondary">Sebelumnya</button>
+        </div>
+      </section>
+
+      <section id="lesions" class="screen" hidden>
+        <p class="eyebrow">03 / BACA KONDISI KULIT</p>
+        <h2 class="heading page-heading">Kenali Jenis Lesi Jerawat</h2>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <article class="card p-6">
+            <h3>Komedo</h3>
+            <p class="muted">Sumbatan folikel yang dapat tampak sebagai komedo terbuka berwarna gelap atau komedo tertutup berwarna pucat.</p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Papula</h3>
+            <p class="muted">Benjolan kecil kemerahan, meradang, dan dapat terasa nyeri.</p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Pustula</h3>
+            <p class="muted">Lesi meradang dengan bagian tengah berisi nanah. Jangan memencet atau menyikat permukaannya.</p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Nodul atau lesi dalam</h3>
+            <p class="muted">Benjolan lebih dalam, besar, atau nyeri. Hindari tindakan alat pada area tersebut dan sarankan evaluasi medis.</p>
+          </article>
+        </div>
+
+        <div class="nav-row">
+          <button type="button" data-go="tools" class="btn primary">Lanjut: Fungsi Alat →</button>
+          <button type="button" data-go="skin" class="btn secondary">Sebelumnya</button>
+        </div>
+      </section>
+
+      <section id="tools" class="screen" hidden>
+        <p class="eyebrow">04 / KENALI PERALATAN</p>
+        <h2 class="heading page-heading">Fungsi Alat Listrik Kecantikan</h2>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <article class="card p-6">
+            <h3>High Frequency</h3>
+            <p class="muted">Menggunakan elektroda berarus frekuensi tinggi sesuai indikasi perangkat.</p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Galvanic</h3>
+            <p class="muted">Menggunakan arus searah untuk prosedur tertentu sesuai petunjuk perangkat.</p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Steamer</h3>
+            <p class="muted">Menghasilkan uap. Perhatikan jarak, suhu, durasi, dan sensitivitas kulit.</p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Vacuum</h3>
+            <p class="muted">Menggunakan daya isap. Hindari area meradang atau lesi yang berisiko terluka.</p>
+          </article>
+
+          <article class="card p-6">
+            <h3>Brush</h3>
+            <p class="muted">Membantu pembersihan permukaan. Hindari gesekan pada jerawat yang meradang.</p>
+          </article>
+        </div>
+
+        <div class="nav-row">
+          <button type="button" data-go="procedure" class="btn primary">Lanjut: Prosedur →</button>
+          <button type="button" data-go="lesions" class="btn secondary">Sebelumnya</button>
+        </div>
+      </section>
+
+      <section id="procedure" class="screen" hidden>
+        <h2 class="heading page-heading">Prosedur Perawatan</h2>
+        <div class="grid gap-3">
+          <article class="card p-5">01 · Konsultasi dan analisis kondisi kulit.</article>
+          <article class="card p-5">02 · Siapkan area kerja dan sanitasi alat sesuai SOP.</article>
+          <article class="card p-5">03 · Pilih tahapan sesuai kondisi dan kontraindikasi.</article>
+          <article class="card p-5">04 · Lakukan tindakan sesuai petunjuk alat dan kompetensi.</article>
+          <article class="card p-5">05 · Evaluasi reaksi kulit dan berikan saran perawatan lanjutan.</article>
+        </div>
+        <div class="nav-row">
+          <button type="button" data-go="hygiene" class="btn primary">Lanjut →</button>
+          <button type="button" data-go="tools" class="btn secondary">Sebelumnya</button>
+        </div>
+      </section>
+
+      <section id="hygiene" class="screen" hidden>
+        <h2 class="heading page-heading">Higiene dan Keselamatan</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <article class="card p-5">Cuci tangan sebelum dan sesudah perawatan.</article>
+          <article class="card p-5">Bersihkan dan disinfeksi alat sesuai petunjuk produsen.</article>
+          <article class="card p-5">Gunakan perlengkapan bersih dan jaga area kerja.</article>
+          <article class="card p-5">Hentikan tindakan jika muncul nyeri atau iritasi berlebihan.</article>
+        </div>
+        <div class="nav-row">
+          <button type="button" data-go="contra" class="btn primary">Lanjut →</button>
+          <button type="button" data-go="procedure" class="btn secondary">Sebelumnya</button>
+        </div>
+      </section>
+
+      <section id="contra" class="screen" hidden>
+        <h2 class="heading page-heading">Kontraindikasi dan Rujukan</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <article class="card p-5">
+            <h3>Kulit luka atau meradang</h3>
+            <p class="muted">Hindari gesekan, isapan, atau pemanasan pada area yang nyeri atau terluka.</p>
+          </article>
+          <article class="card p-5">
+            <h3>Perangkat berbasis arus</h3>
+            <p class="muted">Periksa kontraindikasi spesifik perangkat, termasuk kondisi medis tertentu. Bila ragu, jangan gunakan alat.</p>
+          </article>
+          <article class="card p-5">
+            <h3>Panas dan gesekan</h3>
+            <p class="muted">Uap panas dan sikat dapat memperburuk kulit yang sangat sensitif atau meradang.</p>
+          </article>
+          <article class="card p-5">
+            <h3>Kapan merujuk?</h3>
+            <p class="muted">Sarankan pemeriksaan tenaga kesehatan untuk lesi dalam atau luas, nyeri berat, atau keluhan yang tidak membaik.</p>
+          </article>
+        </div>
+        <div class="nav-row">
+          <button type="button" data-go="summary" class="btn primary">Lanjut: Ringkasan →</button>
+          <button type="button" data-go="hygiene" class="btn secondary">Sebelumnya</button>
+        </div>
+      </section>
+
+      <section id="summary" class="screen" hidden>
+        <h2 class="heading page-heading">Ringkasan Materi</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <article class="card p-5">01 · Analisis kondisi kulit terlebih dahulu.</article>
+          <article class="card p-5">02 · Pahami fungsi dan batasan setiap alat.</article>
+          <article class="card p-5">03 · Kerjakan sesuai SOP.</article>
+          <article class="card p-5">04 · Jaga keselamatan dan kebersihan.</article>
+        </div>
+        <div class="nav-row">
+          <button type="button" data-go="reflection" class="btn primary">Lanjut: Refleksi →</button>
+          <button type="button" data-go="contra" class="btn secondary">Sebelumnya</button>
+        </div>
+      </section>
+
+      <section id="reflection" class="screen" hidden>
+        <h2 class="heading page-heading">Refleksi & Penutup</h2>
+        <p class="finale-thanks">Terima kasih sudah belajar!</p>
+        <p class="muted">Selalu utamakan analisis kulit, kebersihan, dan keselamatan dalam setiap tindakan.</p>
+        <p class="muted">Mengapa kondisi kulit perlu dianalisis sebelum menggunakan alat listrik?</p>
+        <div class="nav-row">
+          <button type="button" data-go="game" class="btn primary">Game Terakhir →</button>
+          <button type="button" data-go="home" class="btn secondary">Kembali ke Menu</button>
+        </div>
+      </section>
+
+      <section id="game" class="screen" hidden>
+        <h2 class="heading page-heading">Kuis Pembelajaran</h2>
+        <p class="muted">Apa yang harus dilakukan sebelum menggunakan alat listrik kecantikan?</p>
+        <button type="button" class="btn secondary" data-go="goals">Ulangi Materi</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Belajar dengan senang · Bekerja dengan aman</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+
+<!-- BAGIAN PENUTUP TERPISAH -->
+<section class="closing-section" id="penutup">
+  <div class="closing-content">
+    <span class="closing-label">PENUTUP</span>
+
+    <h2>Terus Belajar dan Kembangkan Kemampuanmu!</h2>
+
+    <p>
+      Setiap proses belajar adalah kesempatan untuk berkembang.
+      Teruslah berlatih, tingkatkan pengetahuan, dan jangan takut
+      mencoba tantangan baru.
+    </p>
+
+    <a
+      href="https://tianarqidwin-hash.github.io/ale-s-glow-salon/"
+      class="closing-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Raih Tantangan Berikutnya ↗
+    </a>
+  </div>
+</section>
+</body>
+</html>

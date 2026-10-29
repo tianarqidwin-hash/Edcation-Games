@@ -1,0 +1,393 @@
+:root {
+  --ink: #482b3a;
+  --muted: #66505b;
+  --deep: #873950;
+  --accent: #a94867;
+  --pale: #fae7ec;
+  --line: #efd3dc;
+  --paper: #fff8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 91% 9%, #f9dce6 0, transparent 32%),
+    radial-gradient(circle at 3% 70%, #fde9ed 0, transparent 30%),
+    var(--paper);
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  background: #fffafb;
+  padding: 18px 5%;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 25px;
+  color: var(--deep);
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--deep);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+nav button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+nav button,
+.secondary {
+  background: var(--pale);
+  color: var(--deep);
+}
+
+.btn:hover,
+nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #87395026;
+}
+
+.primary {
+  background: var(--deep);
+  color: white;
+}
+
+.screen[hidden],
+[hidden] {
+  display: none !important;
+}
+
+.screen {
+  animation: rise 0.35s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading {
+  font-family: "Fraunces", serif;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.page-heading {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin: 0.5rem 0 1.4rem;
+}
+
+main {
+  padding: 35px 5%;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card {
+  background: #fffdfd;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 12px 32px #8739500b;
+  padding: 22px;
+}
+
+form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+}
+
+form input:focus {
+  outline: 3px solid #f4cad8;
+}
+
+.nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fcebf0;
+}
+
+.portrait-wrap {
+  text-align: center;
+}
+
+.art-badge {
+  display: grid;
+  place-items: center;
+  width: 110px;
+  height: 110px;
+  margin: auto;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 12px 25px #87395015;
+  font-size: 55px;
+}
+
+.portrait-caption {
+  margin-top: 20px;
+  color: var(--deep);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.finale-thanks {
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--deep);
+}
+
+footer {
+  padding: 24px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 15px;
+  }
+
+  main {
+    padding: 24px 15px;
+  }
+
+  .nav-row .btn {
+    width: 100%;
+  }
+
+  .illustration {
+    min-height: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* =================================
+   TAMBAHAN TOMBOL GAME GLOW SALON
+================================= */
+
+.game-link-container {
+  margin: 28px 0;
+  padding: 24px;
+  background: #faf4f0;
+  border: 1px solid #eadbd3;
+  border-radius: 18px;
+}
+
+.game-link-description {
+  margin-bottom: 18px;
+  color: #6f625d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.game-link-button,
+.closing-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 21px;
+  background: #9c6a60;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 11px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.game-link-button:hover,
+.closing-button:hover {
+  background: #7e5047;
+  transform: translateY(-2px);
+}
+
+.game-link-arrow {
+  font-size: 18px;
+}
+
+/* =================================
+   MEMPERBESAR JUDUL GAME TERAKHIR
+================================= */
+
+/* Berlaku jika judul memakai h2 */
+h2 {
+  scroll-margin-top: 90px;
+}
+
+/* =================================
+   BAGIAN PENUTUP TERPISAH
+================================= */
+
+.closing-section {
+  margin-top: 48px;
+  padding: 55px 24px;
+  background: #302a27;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.closing-content {
+  width: min(800px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.closing-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #d9b5a6;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.closing-content h2 {
+  margin-bottom: 18px;
+  font-size: clamp(25px, 4vw, 36px);
+  line-height: 1.35;
+}
+
+.closing-content p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: #e0d7d2;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.closing-button {
+  background: #d4ad9e;
+  color: #302a27;
+}
+
+.closing-button:hover {
+  background: #e5c5b8;
+}
+
+/* Tampilan layar HP */
+@media (max-width: 600px) {
+  .game-link-container {
+    padding: 19px;
+  }
+
+  .game-link-button,
+  .closing-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .closing-section {
+    margin-top: 30px;
+    padding: 38px 20px;
+  }
+}
